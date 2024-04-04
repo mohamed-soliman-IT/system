@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lwa.css">
+
+
+
+</head>
+
+<body id="body-pd" class="body-pd">
+    <header class="header" dir="ltr" id="header">
+        <div class="header_img"> <img src="images/koura.jpg" alt=""> </div>
+
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="dash.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon' title="Home"></i> <span
+                        class="nav_logo-name"><img class="visionlogo" src="images/Asset 1.png" alt=""></span> </a>
+
+                <!-- Nav list items -->
+                <div class="nav_list">
+
+                    <a href="dash.html" class="nav_link "> <i class='bx bx-grid-alt nav_icon' title="Dashboard"></i>
+                        <span class="nav_name ">Dashboard</span> </a>
+
+                    <a href="users.html" class="nav_link">
+                        <i class="fas fa-users" title="Reports"></i>
+                        <span class="nav_name ">الموظفين</span> </a>
+
+
+                    <a href="mission.html" class="nav_link">
+                        <i class="fas fa-chart-pie" title="Reports"></i>
+                        <span class="nav_name "> المهام </span> </a>
+
+
+                    <a href="worehouse.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-box-open"></i>
+
+                        <span class="nav_name " title="Projects">المنتجات</span> </a>
+
+
+                    <a href="Bills.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-file-invoice"></i>
+                        <span class="nav_name active " title="Projects">الفواتير</span> </a>
+
+                    <a href="clients.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-handshake"></i>
+                        <span class="nav_name  " title="Projects">العملاء</span> </a>
+
+                    <a href="print.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-barcode"></i>
+                        <span class="nav_name " title="Projects">طباعه باركود</span> </a>
+
+
+
+                    <a href="#" class="nav_link mt-5"> <i class='bx bx-log-out nav_icon' title="SignOut"></i> <span
+                            class="nav_name"></span> </a> <!-- SignOut -->
+                </div>
+
+
+        </nav>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <div class="container-fluid pt-5" dir="ltr">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="row p-5">
+                            <div class="col-md-6">
+                                <img class="p-1 bill-logo" id="logosec" src="images/visionsec.svg" onclick="toggleImages()">
+                                <img class="p-1 bill-logo" style="display: none;" id="logostudio" src="images/visionstudio.svg" onclick="toggleImages()">
+                            </div>
+
+                            <script>
+                                function toggleImages() {
+                                    var logosec = document.getElementById('logosec');
+                                    var logostudio = document.getElementById('logostudio');
+
+                                    if (logosec.style.display === 'none') {
+                                        logosec.style.display = 'block';
+                                        logostudio.style.display = 'none';
+                                    } else {
+                                        logosec.style.display = 'none';
+                                        logostudio.style.display = 'block';
+                                    }
+                                }
+                            </script>
+
+
+
+
+
+
+                            <div class="col-md-6 text-right">
+                                <p class="font-weight-bold mb-1">Invoice #550</p>
+                                <p class="text-muted">Due to: 4 Dec, 2019</p>
+                            </div>
+                        </div>
+
+                        <hr class="mb-4">
+
+
+
+
+                        <div class="table-responsive col-md-12 text-center align-items-center table-bordered" dir="rtl">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 text-uppercase  font-weight-bold">CLIENT</th>
+                                        <th class="border-0 text-uppercase  font-weight-bold">CONTRACTOR</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Company</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="float-end" dir="ltr">
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">company</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Project</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="float-end" dir="ltr">
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"> Address</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Attention</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="float-end" dir="ltr">
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Phone</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Date</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="float-end" dir="ltr">
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">Fax</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <!-- <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">@</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+                                                </div> -->
+                                            </div>
+                                        </td>
+                                        <td class="float-end" dir="ltr">
+                                            <div class="col-sm-12 my-1"> <!-- Set col-sm-12 to take full width -->
+                                                <label class="sr-only" for="inlineFormInputGroup"></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">P.M</div>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Repeat the above structure for other rows as needed -->
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="table-responsive col-md-12 text-center" dir="rtl">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Item</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Brand </th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Model</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">QTY</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">UNIT PRICE
+                                        </th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">TOTAL
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>IPC2128LE-ADF40KM-G
+                                        </td>
+                                        <td>UNV</td>
+                                        <td>ADF40KM-G</td>
+                                        <td>10</td>
+                                        <td>200$</td>
+                                        <td>2000$</td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>IPC2128LE-ADF40KM-G
+                                        </td>
+                                        <td>UNV</td>
+                                        <td>ADF40KM-G</td>
+                                        <td>10</td>
+                                        <td>200$</td>
+                                        <td>2000$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>IPC2128LE-ADF40KM-G
+                                        </td>
+                                        <td>UNV</td>
+                                        <td>ADF40KM-G</td>
+                                        <td>10</td>
+                                        <td>200$</td>
+                                        <td>2000$</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="d-lg-flex d-sm-block flex-row-reverse  text-center  table-responsive money-bill"
+                            style="background-color: #4723D9;">
+
+
+                            <div class="table-responsive " dir="rtl">
+                                <table class="table text-light table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th class=" text-uppercase small font-weight-bold">SUB TOTAL
+                                            </th>
+                                            <th class=" text-uppercase small font-weight-bold">DISCOUNT
+                                            </th>
+                                            <th class=" text-uppercase small font-weight-bold">AFTER DISCOUNT
+                                            </th>
+                                            <th class="text-uppercase small font-weight-bold">TAX RATE
+                                            </th>
+                                            <th class="text-uppercase small font-weight-bold">VAT
+                                            </th>
+                                            <th class=" text-uppercase small font-weight-bold">Total
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="">
+                                            <td>500$</td>
+                                            <td>500$</td>
+                                            <td>500$</td>
+                                            <td>500$</td>
+                                            <td>500$</td>
+                                            <td>500$</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank"
+                href="http://totoprayogo.com">totoprayogo.com</a></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="users1.js"></script>
+    <script src="lwa.js"></script>
+
+
+
+
+</body>
+
+</html>

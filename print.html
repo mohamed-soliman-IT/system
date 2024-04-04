@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lwa.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.11.0/JsBarcode.all.min.js"></script>
+
+</head>
+
+<body id="body-pd" class="body-pd">
+    <header class="header" dir="ltr" id="header">
+        <div class="header_img"> <img src="images/koura.jpg" alt=""> </div>
+
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="dash.html" class="nav_logo"> <i class='bx bx-layer nav_logo-icon' title="Home"></i> <span
+                        class="nav_logo-name"><img class="visionlogo" src="images/Asset 1.png" alt=""></span> </a>
+
+                <!-- Nav list items -->
+                <div class="nav_list">
+
+                    <a href="dash.html" class="nav_link "> <i class='bx bx-grid-alt nav_icon' title="Dashboard"></i>
+                        <span class="nav_name ">Dashboard</span> </a>
+
+                    <a href="users.html" class="nav_link">
+                        <i class="fas fa-users" title="Reports"></i>
+                        <span class="nav_name ">الموظفين</span> </a>
+
+
+                    <a href="mission.html" class="nav_link">
+                        <i class="fas fa-chart-pie" title="Reports"></i>
+                        <span class="nav_name "> المهام </span> </a>
+
+
+                    <a href="worehouse.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-box-open"></i>
+
+                        <span class="nav_name " title="Projects">المنتجات</span> </a>
+
+
+                    <a href="Bills.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-file-invoice"></i>
+                        <span class="nav_name  " title="Projects">الفواتير</span> </a>
+
+                    <a href="clients.html" class="nav_link">
+                        <!-- <i class="fas fa-building" title="Projects"></i> -->
+                        <i class="fas fa-handshake"></i>
+                        <span class="nav_name  " title="Projects">العملاء</span> </a>
+
+                        <a href="print.html" class="nav_link">
+                            <!-- <i class="fas fa-building" title="Projects"></i> -->
+                            <i class="fas fa-barcode"></i>
+                            <span class="nav_name active" title="Projects">طباعه باركود</span> </a>
+
+
+
+                    <a href="#" class="nav_link mt-5"> <i class='bx bx-log-out nav_icon' title="SignOut"></i> <span
+                            class="nav_name"></span> </a> <!-- SignOut -->
+                </div>
+
+
+        </nav>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <form class="main-content">
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6">
+                    <label for="itemCode">كود الصنف</label>
+                    <input type="text" class="form-control" id="itemCode" placeholder=" كود الصنف">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4" dir="ltr">اسم الصنف</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="اسم الصنف">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">مكان الصنف</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder=" مكان الصنف">
+            </div>
+            <div class="form-group">
+                <label for="inputState">حالة الصنف</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>جديد</option>
+                    <option>تالف</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">الكمية</label>
+                <input type="number" class="form-control" id="quantity" placeholder="الكمية">
+            </div>
+
+            <div id="barcode" style="text-align: center; margin-top: 20px;"></div>
+
+            <button type="button" class="btn w-50 btn-print" onclick="printPage()">طباعة <i
+                class="fas fa-print" title="Reports"></i></button>
+
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="users.js"></script>
+    <script src="lwa.js"></script>
+
+
+
+
+</body>
+
+</html>
